@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.Color?>
+
+<VBox spacing="15" prefWidth="700" prefHeight="300" fx:controller="Traduction.Controller" xmlns:fx="http://javafx.com/fxml">
+
+	<fx:define>
+		<ToggleGroup fx:id="toggleGroupIn" />
+		<ToggleGroup fx:id="toggleGroupOut" />
+	</fx:define>
+
+	<Label text="Traduction" />
+
+	<HBox spacing="106">
+
+		<HBox>
+			<ToggleButton text="Anglais" toggleGroup="$toggleGroupOut" />
+			<ToggleButton text="Français" toggleGroup="$toggleGroupOut" />
+			<ToggleButton text="Allemand" toggleGroup="$toggleGroupOut" />
+		</HBox>
+		<HBox>
+			<ToggleButton text="Anglais" toggleGroup="$toggleGroupIn" />
+			<ToggleButton text="Français" toggleGroup="$toggleGroupIn" />
+			<ToggleButton text="Allemand" toggleGroup="$toggleGroupIn" />
+		</HBox>
+
+		<Button text="Traduire" onAction="#processTranslation" />
+
+	</HBox>
+
+	<HBox spacing="15">
+		<TextArea fx:id="textOut" prefWidth="350" prefHeight="200" />
+		<TextArea fx:id="textIn" prefWidth="350" prefHeight="200" />
+
+	</HBox>
+
+</VBox>
